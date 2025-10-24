@@ -59,7 +59,7 @@ public class Lab2P1_LeonardoBenavides {
                 if(opcion == 2){
                    int contador_turnos = 5;
                    int presa_vidas = 3;
-                   while (contador_turnos>0){
+                   while (contador_turnos>0&&presa_vidas>0){
                        System.out.println("Intentos restantes " + contador_turnos);
                        System.out.println("PRESA");
                        System.out.println("Elige un lugar en el que esconderte");
@@ -75,17 +75,49 @@ public class Lab2P1_LeonardoBenavides {
                        System.out.println("3. - El bano"); 
                        
                        int opcion_cazador = leer.nextInt();
+                       if (opcion_presa>0&&opcion_presa<4&&opcion_cazador>0&&opcion_cazador<4){
+                            if (opcion_presa == opcion_cazador){
+                                System.out.println("HAS SIDO ENCONTRADO!!");
+                                contador_turnos = contador_turnos - 1;
+                                presa_vidas = presa_vidas - 1;
+                       }    else{
+                                System.out.println("EL CAZADOR NO PUDO ENCONTRARTE");
+                                contador_turnos = contador_turnos - 1;
+                            
+                       }
+                        }else{
+                           System.out.println("Opcion Invalida. Intente de nuevo");
+                       }
+                           
+                           
                        
-                       if (opcion_presa ==  opcion_cazador);{
-                          System.out.println("HAS SIDO ENCONTRADO! ");
-                          contador_turnos = contador_turnos - 1;
+                               
+                       
+
+                        
+                                 
+                                          
+                           
+                           
+                       
+                               
+                              
+                       
+                       
                    }
-                       
-                       
+                   if (presa_vidas == 0){
+                       System.out.println("EL CAZADOR GANA");
                    }
-                   
+                   else{
+                       System.out.println("LA PRESA GANA ");
+                   }
                     
-                }
+                }// fin opcion 2
+                else
+                    if(opcion == 3){
+                        
+                    }
+                        
             
         System.out.println("Desea continuar? S/N");
         continuar = leer.next().charAt(0);}// fin del menu
