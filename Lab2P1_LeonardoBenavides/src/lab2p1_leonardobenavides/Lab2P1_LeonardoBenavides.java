@@ -115,6 +115,22 @@ public class Lab2P1_LeonardoBenavides {
                 }// fin opcion 2
                 else
                     if(opcion == 3){
+                        System.out.println("Ingrese un numero mayor que 0: ");
+                        int numeros = leer.nextInt();
+                        if (numeros>0){
+                         int contador_cuadrados = 1;
+                         int acum = 0;
+                         int total = 0;
+                         while (contador_cuadrados<=numeros){
+                                total = (contador_cuadrados * contador_cuadrados);
+                              
+                                acum = acum + total;
+                                contador_cuadrados = contador_cuadrados + 1;
+                               
+                             
+                         }
+                          System.out.println(acum);
+                        }
                         
                     }
                         
